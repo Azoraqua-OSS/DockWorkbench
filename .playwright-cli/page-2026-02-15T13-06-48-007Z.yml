@@ -1,0 +1,126 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "DockWorkbench" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]: alpha
+      - generic [ref=e7]:
+        - combobox [ref=e115]:
+          - img "Online"
+          - generic:
+            - generic:
+              - img "Online"
+              - generic: Local Docker
+          - img
+        - generic [ref=e9]:
+          - img [ref=e10]
+          - textbox "Search containers, images, volumes…" [ref=e13]
+        - generic [ref=e14]:
+          - button [ref=e15]:
+            - img
+          - button [ref=e16]:
+            - img
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: Tools
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - button "Dockerfile" [ref=e26]:
+              - img [ref=e27]
+              - text: Dockerfile
+          - listitem [ref=e32]:
+            - button "Docker Compose" [ref=e33]:
+              - img [ref=e34]
+              - text: Docker Compose
+      - generic [ref=e38]:
+        - generic [ref=e39]: Workspace
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - button "Containers" [ref=e43]:
+              - img [ref=e44]
+              - text: Containers
+          - listitem [ref=e48]:
+            - button "Images" [ref=e49]:
+              - img [ref=e50]
+              - text: Images
+          - listitem [ref=e54]:
+            - button "Volumes" [ref=e55]:
+              - img [ref=e56]
+              - text: Volumes
+          - listitem [ref=e58]:
+            - button "Networks" [ref=e59]:
+              - img [ref=e60]
+              - text: Networks
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - heading "Connect a Docker Server" [level=1] [ref=e68]
+          - paragraph [ref=e69]: Pick a connector first, then enter connection details. Added servers are stored in localStorage and appear in the header selector.
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: New Connection
+            - generic [ref=e73]: Choose one connector and provide only the fields needed for it.
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - paragraph [ref=e77]: Simulated connection result
+                - paragraph [ref=e78]: Pick random or force a success/failure outcome.
+              - generic [ref=e79]:
+                - button "Random" [ref=e80]
+                - button "Force success" [pressed] [ref=e81]
+                - button "Force failure" [ref=e82]
+            - generic [ref=e83]:
+              - tablist [ref=e84]:
+                - tab "Local Socket" [selected] [ref=e85]:
+                  - img
+                  - text: Local Socket
+                - tab "SSH" [ref=e86]:
+                  - img
+                  - text: SSH
+                - tab "HTTP(S)" [ref=e87]:
+                  - img
+                  - text: HTTP(S)
+              - tabpanel "Local Socket" [ref=e88]:
+                - generic [ref=e89]:
+                  - paragraph [ref=e90]: Connect to a Docker daemon exposed as a Unix domain socket.
+                  - generic [ref=e91]:
+                    - generic [ref=e92]: Connection name
+                    - generic [ref=e93]:
+                      - textbox "Connection name" [ref=e94]: Local Docker
+                      - paragraph [ref=e116]: A server with this name already exists. Allowed, but can be confusing.
+                    - generic [ref=e95]: Socket path
+                    - textbox "Socket path" [ref=e97]:
+                      - /placeholder: /var/run/docker.sock
+                      - text: /var/run/docker.sock
+                  - button "Connect local socket" [ref=e99]:
+                    - img
+                    - text: Connect local socket
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: Configured Servers
+            - generic [ref=e103]: "Stored locally in your browser profile. Currently configured: 1"
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]:
+                - img "Online" [ref=e120]
+                - generic [ref=e121]: Local Docker
+              - generic [ref=e122]: LOCAL - /var/run/docker.sock
+            - button "Remove Local Docker" [ref=e123]:
+              - img
+          - generic [ref=e106]:
+            - text: "Persistence key:"
+            - code [ref=e107]: dockworkbench-server-store
+    - contentinfo [ref=e108]:
+      - button "Disconnected" [ref=e109]:
+        - img
+        - generic [ref=e110]: Disconnected
+      - button "v0.1.0" [ref=e111]:
+        - img
+        - generic [ref=e112]: v0.1.0
+    - region "Notifications alt+T":
+      - list:
+        - listitem [ref=e124]:
+          - img [ref=e126]
+          - generic [ref=e130]: Connected to Local Docker.
+  - alert [ref=e113]

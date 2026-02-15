@@ -1,0 +1,95 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "DockWorkbench" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]: alpha
+      - generic [ref=e7]:
+        - generic [ref=e9]:
+          - img [ref=e10]
+          - textbox "Search containers, images, volumes…" [ref=e13]
+        - generic [ref=e14]:
+          - button [ref=e15]:
+            - img
+          - button [ref=e16]:
+            - img
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: Tools
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - button "Dockerfile" [ref=e26]:
+              - img [ref=e27]
+              - text: Dockerfile
+          - listitem [ref=e32]:
+            - button "Docker Compose" [ref=e33]:
+              - img [ref=e34]
+              - text: Docker Compose
+      - generic [ref=e38]:
+        - generic [ref=e39]: Workspace
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - button "Containers" [ref=e43]:
+              - img [ref=e44]
+              - text: Containers
+          - listitem [ref=e48]:
+            - button "Images" [ref=e49]:
+              - img [ref=e50]
+              - text: Images
+          - listitem [ref=e54]:
+            - button "Volumes" [ref=e55]:
+              - img [ref=e56]
+              - text: Volumes
+          - listitem [ref=e58]:
+            - button "Networks" [ref=e59]:
+              - img [ref=e60]
+              - text: Networks
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - heading "Connect a Docker Server" [level=1] [ref=e68]
+          - paragraph [ref=e69]: Pick a connector first, then enter connection details. Added servers are stored in localStorage and appear in the header selector.
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: New Connection
+            - generic [ref=e73]: Choose one connector and provide only the fields needed for it.
+          - generic [ref=e75]:
+            - tablist [ref=e76]:
+              - tab "Local Socket" [selected] [ref=e77]:
+                - img
+                - text: Local Socket
+              - tab "SSH" [ref=e78]:
+                - img
+                - text: SSH
+              - tab "HTTP(S)" [ref=e79]:
+                - img
+                - text: HTTP(S)
+            - tabpanel "Local Socket" [ref=e80]:
+              - generic [ref=e81]:
+                - generic [ref=e82]:
+                  - generic [ref=e83]: Connection name
+                  - textbox "Connection name" [ref=e84]: Local Docker
+                  - generic [ref=e85]: Socket path
+                  - textbox "Socket path" [ref=e86]:
+                    - /placeholder: /var/run/docker.sock
+                    - text: /var/run/docker.sock
+                - button "Connect local socket" [ref=e88]:
+                  - img
+                  - text: Connect local socket
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - generic [ref=e91]: Configured Servers
+            - generic [ref=e92]: "Stored locally in your browser profile. Currently configured: 0"
+          - generic [ref=e94]: No servers yet. Add your first connection above.
+          - generic [ref=e95]:
+            - text: "Persistence key:"
+            - code [ref=e96]: dockworkbench-server-store
+    - contentinfo [ref=e97]:
+      - button "Disconnected" [ref=e98]:
+        - img
+        - generic [ref=e99]: Disconnected
+      - button "v0.1.0" [ref=e100]:
+        - img
+        - generic [ref=e101]: v0.1.0
+  - alert [ref=e102]

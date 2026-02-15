@@ -29,7 +29,7 @@ function IconTextButton({
       )}
     >
       {icon}
-      <span className="leading-none">{label}</span>
+      <span className="leading-none text-sm">{label}</span>
     </Button>
   );
 }

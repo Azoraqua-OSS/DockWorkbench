@@ -17,7 +17,7 @@
       {
         "label": "main",
         "dragDropEnabled": true,
-        "devtools": false,
+        "devtools": true,
         "trafficLightPosition": {
           "x": 16,
           "y": 24
@@ -32,27 +32,6 @@
         "transparent": false,
         "titleBarStyle": "Overlay",
         "hiddenTitle": true
-      },
-      {
-        "label": "side",
-        "create": false,
-        "url": "http://127.0.0.1:6006",
-        "title": "DockWorkbench Storybook",
-        "resizable": true,
-        "fullscreen": false,
-        "center": false,
-        "decorations": true,
-        "transparent": false,
-        "hiddenTitle": false,
-        "devtools": false,
-        "dragDropEnabled": true,
-        "trafficLightPosition": {
-          "x": 16,
-          "y": 24
-        },
-        "width": 420.0,
-        "height": 720.0,
-        "titleBarStyle": "Visible"
       }
     ],
     "security": {

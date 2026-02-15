@@ -9,7 +9,7 @@ export type SidebarNavItemProps = {
 function SidebarNavItem({ icon: Icon, label }: SidebarNavItemProps) {
   return (
     <SidebarMenuItem>
-      <SidebarMenuButton>
+      <SidebarMenuButton tooltip={label}>
         <Icon />
         {label}
       </SidebarMenuButton>

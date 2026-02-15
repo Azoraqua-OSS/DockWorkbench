@@ -1,12 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Container } from "lucide-react";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarMenu,
-  SidebarProvider,
-} from "@/components/ui/sidebar";
 import { SidebarNavItem } from "./SidebarNavItem";
+import { SidebarStoryFrame } from "./SidebarStoryFrame";
 
 const meta = {
   title: "Custom/SidebarNavItem",
@@ -14,17 +9,9 @@ const meta = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="h-[240px] w-[280px]">
-        <SidebarProvider defaultOpen>
-          <Sidebar collapsible="none" className="h-full">
-            <SidebarContent>
-              <SidebarMenu>
-                <Story />
-              </SidebarMenu>
-            </SidebarContent>
-          </Sidebar>
-        </SidebarProvider>
-      </div>
+      <SidebarStoryFrame className="h-[240px]" withMenu>
+        <Story />
+      </SidebarStoryFrame>
     ),
   ],
   args: {

@@ -17,12 +17,13 @@ import {
 } from "@/components/custom/SidebarNavSection";
 import { StatusButton } from "@/components/custom/StatusButton";
 import { Header } from "@/components/layout/header";
+import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarContent,
   SidebarProvider,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
@@ -67,24 +68,27 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             >
               <SidebarContent>
                 <SidebarNavSection title="Tools" items={toolItems} />
+                <Separator
+                  decorative
+                  className="!w-56 mx-auto bg-neutral-700/70"
+                />
                 <SidebarNavSection title="Workspace" items={workspaceItems} />
               </SidebarContent>
             </Sidebar>
 
-            <main className="min-w-screen min-h-screen p-3">
-              <SidebarTrigger />
-
+            <main className="fixed top-12 right-0 bottom-0 left-0 overflow-y-auto overflow-x-hidden pb-8 transition-[left] duration-200 ease-linear md:left-64 md:peer-data-[collapsible=icon]:left-12">
               {children}
             </main>
 
             <footer className="fixed bottom-0 w-full px-4 py-1 flex flex-1 justify-between items-center z-50 bg-neutral-950/70">
-              <StatusButton variant="connected" />
+              <StatusButton variant="disconnected" />
 
               <IconTextButton
                 icon={<Tag className="size-[1em] shrink-0 align-middle" />}
                 label={`v${version}`}
               />
             </footer>
+            <Toaster richColors position="bottom-right" />
           </TooltipProvider>
         </SidebarProvider>
       </body>

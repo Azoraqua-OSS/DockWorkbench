@@ -8,6 +8,9 @@ const meta = {
   args: {
     variant: "disconnected",
   },
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     variant: {
       control: {
@@ -43,4 +46,15 @@ export const ErrorState: Story = {
   args: {
     variant: "error",
   },
+};
+
+export const AllStates: Story = {
+  render: () => (
+    <div className="inline-flex items-center gap-3">
+      <StatusButton variant="connected" />
+      <StatusButton variant="disconnected" />
+      <StatusButton variant="syncing" />
+      <StatusButton variant="error" />
+    </div>
+  ),
 };
