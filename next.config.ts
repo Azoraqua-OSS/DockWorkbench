@@ -1,8 +1,18 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+    reactCompiler: true,
+    reactStrictMode: true,
+    compress: true,
+    output: "export",
+    compiler: {},
+    images: {
+        unoptimized: true,
+    },
+
+    devIndicators: {
+        position: "bottom-right",
+    },
 };
 
 export default nextConfig;
