@@ -1,7 +1,5 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
+# Package manager dependencies
+/node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -10,35 +8,50 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# Build outputs and caches
 /.next/
 /out/
+/output/
+/build/
+/dist/
+/.turbo/
+/.cache/
+*.tsbuildinfo
+next-env.d.ts
 
-# production
-/build
+# Tauri / Rust generated outputs
+/src-tauri/target/
+/src-tauri/gen/
 
-# misc
-.DS_Store
-*.pem
+# Test and tooling artifacts
+/coverage/
+/storybook-static/
+*.storybook.log
+/playwright-report/
+/test-results/
+/.playwright-cli/
 
-# debug
+# Environment and local config
+.env*
+!.env.example
+!.env.template
+*.local
+
+# Logs and debug files
+*.log
+*.log.*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# IDE/editor files
+/.idea/
+/.vscode/
 
-# vercel
-.vercel
+# OS files
+.DS_Store
+Thumbs.db
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-*storybook.log
-storybook-static
+# Certificates and keys
+*.pem
